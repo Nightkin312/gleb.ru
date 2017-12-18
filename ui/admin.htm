@@ -1,0 +1,43 @@
+<link rel="stylesheet" type="text/css" href="ui/font/css/font-awesome.min.css">
+<div class="container my-3">
+	<h1 class="text-center text-head">Панель администратора</h1>
+	<hr>
+	<div class="row">
+		<div class="col-md-7 my-2">
+			<table class="table my-4" >
+				<tr>
+					<th>Логин</th>
+					<th>Пароль</th>
+					<th>Удаление</th>
+				</tr>
+		 		<?php foreach ($admins as $admin) { ?>
+				<tr>
+					<td><?= $admin['login'] ?></td>
+					<td><?= $admin['pass'] ?></td>
+					<td class="w-25">
+						<a href="/admin/delete/<?= $admin['id'] ?>" class="btn btn-danger btn-db"><i class="fa fa-ban"></i></a>
+					</td>
+				</tr>
+				<?php } ?>
+			</table>
+		</div>
+
+		<div class="col-md-4 ml-auto">
+			<div class=" card card-body my-2">
+				<h2 class="text-left text-add">Добавление нового пользователя</h2>
+				<form action="/admin/add" method="post">
+					<div class="form-group">
+						<label>Логин:</label>
+						<input type="text" class="form-control" name="login_admin">
+						<label>Пароль:</label>
+						<input type="text" class="form-control" name="pass_admin">
+					</div>
+
+					<div class="text-right">
+						<button class="btn btn-insert">Добавить</button>
+					</div>
+				</form>
+			</div>	
+		</div>
+	</div>
+</div>

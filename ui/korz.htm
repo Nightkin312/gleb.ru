@@ -1,0 +1,39 @@
+<div class="container my-4">
+	<h2 class="sisi s">Ваша корзина</h2>
+	<br>
+	<?php foreach ($korzs as $korz) { ?>
+		<div class="row mb-2">
+			<div class="col-md-2">
+				<img src="ui/images/<?= $korz->photo ?>" width="100%">
+			</div>
+			<div class="col-md-7">
+				<span class="sisi"><?= $korz->name ?></span>
+				<br>
+				<br>
+				<p class="sisi g"><?= $korz->opis ?></p>
+			</div>
+			<div class="col-md-3 text-right mt-auto mb-auto">
+				<span class="sisi f"><?= $korz->cena ?> руб.</span>
+			</div>
+		</div>
+
+		<hr>
+	<? } ?>
+
+	<div class="row mb-2" style="background-color: #A4C5FC;">
+		<div class="col-md-2"></div>
+		<div class="col-md-7">
+			<span class="sisi" style="color: #0F8484; font-size: 30px;">СУММА ЗАКАЗА: </span>
+			<br>
+			<br>
+		</div>
+
+		<div class="col-md-3 text-right mt-auto mb-auto">
+			<span class="sisi" style="font-size: 30px;"><?php $a = array(4990, 1060, 2587); echo array_sum($a);?> руб.</span>
+		</div>
+	</div>
+
+	<div class="row text-right my-4">
+		<button class="btn btn-new ml-auto">ОФОРМИТЬ ЗАКАЗ</button>
+	</div>
+</div>

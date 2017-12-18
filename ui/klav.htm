@@ -1,0 +1,38 @@
+<div class="container">
+	<div class="row">
+		<div class="submenu-main py-4 col-md-12">
+			<ul class="nav menu ">
+				<li class="item-130 ">
+					<a href="/klav" class="mens menus">Клавиатуры</a>
+				</li>
+				<li class="item-130 mens">
+					<a href="/mih">Мыши</a>
+				</li>
+				<li class="item-130 mens">
+					<a href="/nab">Наборы</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="container">
+			<div class="row">
+					<?php foreach ($klavs as $klav) { ?>
+					<form method="post" action="/klavkorz/<?= $klav->id ?>" class="col-md-3 text-left">
+							<img name="photo_korz" src="ui/images/<?= $klav->photo ?>" width="100%" height="40%">
+							<br>
+							<span><a href="#" class="ss" name="name_korz"><?= $klav->name ?></a></span>
+							<br><br>
+							<span class="sisi" name="cena_korz"><?= $klav->cena ?> руб.</span>
+							<br><br>
+							<div class="text-right">
+								<button type="submit" class="btn btn-new">В корзину <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+							</div>
+							<br><br>
+						</form>
+					<?php } ?>
+			</div>
+		</div>
+	</div>
+</div>

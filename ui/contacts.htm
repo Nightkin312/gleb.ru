@@ -1,0 +1,80 @@
+<script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script> 
+<script src="assets/js/google-map.js"></script>
+
+<div class="container my-5">
+	<div class="row">
+		<article class="col-sm-9 maincontent">
+			<header class="page-header">
+				<h1 class="page-title">Контакты</h1>
+			</header>
+				
+			<p>У вас возникли вопросы? задайте задайте их нам...</p>
+			<br>
+
+			<form action="/contacts" method="post">
+				<div class="form-group">
+					<div class="row">
+						<div class="col-sm-4">
+							<input class="form-control" name="name_user" type="text" placeholder="Ваше имя">
+						</div>
+
+						<div class="col-sm-4">
+							<input class="form-control" name="mail_user" type="text" placeholder="Email">
+						</div>
+
+						<div class="col-sm-4"> 
+							<input class="form-control" name="tel_user" type="text" placeholder="Телeфон">
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<textarea placeholder="Ваш коментарий" name="comments_user" class="form-control" rows="9"></textarea>
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col-sm-6">
+						</div>
+					</div>						
+				</div>
+
+				<div class="col-sm-12 text-right">
+					<button class="btn btn-success">Отправить</button>
+				</div>
+			</form>
+
+ 			<div class="clearfix"></div>
+		</article>
+
+		<aside class="col-sm-3 sidebar sidebar-right">
+			<div class="widget">
+				
+				<h4>Пункт самовывоза:</h4>
+				<address>г. Москва, Нахимовский проспект, д.21</address>
+
+				<h4>Контактное лицо:</h4>
+				<address>Калугин Глеб</address>
+
+				<h4>Телефон:</h4>
+				<address>+7 (800) 555-35-35</address>
+
+  				<div class="right-contact">
+        			<div class="map">
+            				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2676.1798245563054!2d37.594738837502426!3d55.664817644912056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab33470ad1ad5%3A0x5bd30aeaed31bb1a!2z0J3QsNGF0LjQvNC-0LLRgdC60LjQuSDQv9GALiwgMjEsINCc0L7RgdC60LLQsCwgMTE3NjM4!5e0!3m2!1sru!2sru!4v1513015703042" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        			</div>
+    			</div>
+			</div>
+		</aside>
+	</div>
+</div>
+
+<section class="container-full top-space">
+	<div id="map"></div>
+</section>
+
+<div class="py-4 my-5"></div> 
